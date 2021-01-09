@@ -1,0 +1,7 @@
+#weatherContainer{
+    height: 200px;
+    width: 80%;
+    margin: 10px auto;
+    border: 2px black solid;
+    background-color: lightcoral;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>All farms</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <%= messages%>
+      <h1>All Farms here</h1>
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <% for(let f of farms){ %>
+                <li class="list-group-item"><a href="/farms/<%= f._id%>"><%= f.name %></a></li>
+            <% } %>
+        </ul>
+      </div>
+
+    </body>
+</html>

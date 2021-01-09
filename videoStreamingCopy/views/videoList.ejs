@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VIDEO PLAY</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body> 
+        <h1>Videos</h1>  
+        <div class="container">
+                <div class="row">
+                    <% for(let video of videoArray){ %>
+                        <div class="rowBox">
+                            <div class="col-7 col-md-offset-4">
+                                <% if(video.url){ %>
+                                <video id="videoPlayer" controls muted="muted" poster="<%= video.thumbnail %>">
+                                    <source src="<%= video.url %>" type="video/mp4" >
+                                </video>
+                                <% } %>                        
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-4 col-md-offset-4" id="details">                               
+                                <% for(let detail of  video.details){ %>
+                                    <h2><%= detail %></h2>
+                                <% } %>                                                                      
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+        </div> 
+    </body>
+</html>
+
+
+
+<!-- src="http://localhost:3000/video" type="video/mp4" -->

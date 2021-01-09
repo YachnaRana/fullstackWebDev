@@ -1,0 +1,12 @@
+#container{
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 800px;
+}
+
+
+
+

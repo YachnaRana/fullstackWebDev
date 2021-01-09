@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+        <h1>Comments:</h1>
+        <% for(let tweet of tweets){ %>
+            <h2><%= tweet.tweet%> - <%= tweet.name%></h2> <a href="/tweets/<%= tweet.id%>">...more</a>
+            
+        <% } %>
+
+        <a href="/tweets/new">Add new tweet</a>
+<%- include('../partials/footer') %>

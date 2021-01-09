@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <%= messages %>
+        <div class="container" style="margin: 40px auto; width: 50%;">
+            <div class="card">
+                <h5 class="card-header"><%= farm.name%></h5>
+                <div class="card-body">
+                  <h5 class="card-title"><%= farm.city%></h5>
+                  <h5>Products:</h5>
+                  <ul>
+                    <%for(let product of farm.products){%>
+                      <li><a href="/products/<%= product._id%>"><%= product.name%></a></li>
+                    <%}%>
+                  </ul>
+                  <p class="card-text"><%= farm.email%></p>
+                  <a href="/farms/<%= farm._id%>/products/new">Add New Product</a>
+                  <a href="/farms" class="btn btn-info" style="display: inline-block;">Go back</a>
+                  <form method="POST" action="/farms/<%= farm._id%>?_method=DELETE">
+                    <button class="btn btn-danger">Delete</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

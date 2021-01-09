@@ -1,0 +1,10 @@
+#container{
+    width: 70%;
+    height: 40vh;
+    margin: 20px 0;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
